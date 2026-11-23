@@ -1,0 +1,59 @@
+:root{
+  --brand:#E7972D; --brand-d:#B86F10; --bg:#FFF8EC; --surface:#FFFFFF; --text:#3A2410; --muted:#7A624A; --line:#F0DCBE; --on-brand:#2B1700;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1308;--surface:#2A1D0F;--text:#FBEFDC;--muted:#CDB48F;--line:#47331B;--brand-d:#F2B766}}
+:root[data-theme="dark"]{--bg:#1C1308;--surface:#2A1D0F;--text:#FBEFDC;--muted:#CDB48F;--line:#47331B;--brand-d:#F2B766}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Nunito,system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:Fredoka,Nunito,sans-serif;line-height:1.15;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:2px solid var(--line);z-index:20}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Fredoka;font-weight:700;font-size:1.6rem;color:var(--brand);text-decoration:none;letter-spacing:.5px}
+nav a{color:var(--text);text-decoration:none;font-weight:700;margin-left:18px}
+nav a:hover{color:var(--brand-d)}
+.cartbtn{background:var(--brand);color:var(--on-brand);border:0;border-radius:99px;padding:8px 16px;font:700 .95rem Nunito;cursor:pointer;margin-left:18px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--text);outline-offset:2px}
+.hero{background:var(--brand);color:var(--on-brand);padding:56px 0 64px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,7vw,4.4rem)}
+.hero p{font-size:1.15rem;max-width:34ch;margin:14px 0 24px}
+.btn{display:inline-block;background:var(--on-brand);color:#FFE9C7;border:0;border-radius:99px;padding:13px 26px;font:700 1rem Nunito;text-decoration:none;cursor:pointer}
+.plate{font-size:clamp(5rem,16vw,9rem);text-align:center;line-height:1;transform:rotate(-6deg);filter:drop-shadow(0 8px 0 rgba(0,0,0,.15))}
+section{padding:56px 0}
+section h2{font-size:2rem;margin-bottom:6px}
+.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card .ico{font-size:3.2rem}
+.card .photo{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 40%;border-radius:14px;border:2px solid var(--line);display:block}
+.card .price{font:700 1.2rem Fredoka;color:var(--brand-d)}
+.card select{padding:9px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--text);font:600 .95rem Nunito}
+.card .row{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:auto}
+.add{background:var(--brand);color:var(--on-brand);border:0;border-radius:99px;padding:10px 18px;font:700 .95rem Nunito;cursor:pointer}
+.add:active{transform:scale(.96)}
+.about{background:var(--surface);border-block:2px solid var(--line)}
+.about p{max-width:62ch}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:24px}
+.steps div{border-left:6px solid var(--brand);padding:4px 14px}
+footer{padding:32px 0;color:var(--muted);text-align:center}
+#panel{position:fixed;top:0;right:0;height:100%;width:min(380px,100%);background:var(--surface);border-left:2px solid var(--line);z-index:50;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px))}
+#panel.open{transform:none}
+#items{flex:1;overflow:auto;margin:14px 0}
+.it{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}
+.qty button{width:28px;height:28px;border-radius:50%;border:2px solid var(--brand);background:none;color:var(--text);font-weight:700;cursor:pointer}
+.qty span{display:inline-block;min-width:24px;text-align:center}
+#panel label{font-weight:700;font-size:.9rem}
+#panel input{width:100%;padding:10px;margin:4px 0 12px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+.total{display:flex;justify-content:space-between;font:700 1.2rem Fredoka;margin-bottom:12px}
+.close{align-self:flex-end;background:none;border:0;font-size:1.6rem;color:var(--text);cursor:pointer}
+.empty{color:var(--muted);text-align:center;padding:24px 0}
+.hero .btn{margin:0 10px 10px 0}
+.btn.alt{background:transparent;color:var(--on-brand);border:2px solid var(--on-brand)}
+.contact{text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
+.contact:hover{transform:translateY(-3px);border-color:var(--brand)}
+.contact:focus-visible{outline:3px solid var(--text);outline-offset:2px}
+@media(max-width:700px){.hero .wrap{grid-template-columns:1fr}.plate{order:-1}nav a.hide{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JAJANIN – Cireng Isi &amp; Citul</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#atas">JAJANIN</a>
+    <nav><a class="hide" href="#menu">Menu</a><a class="hide" href="#tentang">Tentang</a><a class="hide" href="#kontak">Kontak</a><button class="cartbtn" id="openCart">Keranjang (<span id="count">0</span>)</button></nav>
+  </div>
+</header>
+
+<main id="atas">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Jajan enak, harga bersahabat.</h1>
+      <p>Cireng isi, citul, chicken katsu, spaghetti, dan stup roti buatan sendiri, digoreng saat dipesan. Renyah di luar, gurih di dalam.</p>
+      <a class="btn" href="#menu">Lihat menu</a>
+      <a class="btn alt" href="https://shopee.co.id/rifki_572?mmp_pid=an_11337711843&amp;uls_trackid=5763pkti00g7&amp;utm_campaign=-&amp;utm_content=-&amp;utm_medium=affiliates&amp;utm_source=an_11337711843&amp;utm_term=fvpzk7qqo8xo" target="_blank" rel="noopener sponsored">Belanja di Shopee</a>
+    </div>
+    <div class="plate" aria-hidden="true">🥟🍗</div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>Menu JAJANIN</h2>
+    <p class="sub">Pilih varian, tambahkan ke keranjang, lalu pesan lewat WhatsApp.</p>
+    <div class="grid" id="products"></div>
+  </div>
+</section>
+
+<section class="about" id="tentang">
+  <div class="wrap">
+    <h2>Dibuat dari dapur rumahan</h2>
+    <p>JAJANIN adalah usaha kecil yang membuat jajanan khas Sunda. Adonan diulen setiap pagi, isiannya dimasak sendiri, dan semuanya digoreng hangat sebelum diantar.</p>
+    <div class="steps">
+      <div><strong>Pilih menu</strong><br>Tentukan varian dan jumlahnya.</div>
+      <div><strong>Kirim pesanan</strong><br>Isi nama dan alamat, lalu kirim lewat WhatsApp.</div>
+      <div><strong>Nikmati hangat</strong><br>Pesanan digoreng dan diantar ke rumah.</div>
+    </div>
+  </div>
+</section>
+<section id="kontak">
+  <div class="wrap">
+    <h2>Hubungi kami</h2>
+    <p class="sub">Mau tanya menu, pesan dalam jumlah banyak, atau cek pesanan? Langsung hubungi JAJANIN.</p>
+    <div class="grid">
+      <a class="card contact" href="https://wa.me/6289632380485?text=Halo%20JAJANIN%2C%20saya%20mau%20tanya%20menu." target="_blank" rel="noopener">
+        <div class="ico" aria-hidden="true">💬</div>
+        <h3>WhatsApp</h3>
+        <p style="margin:0;color:var(--muted)">Chat langsung, balasan paling cepat.</p>
+        <div class="price">0896-3238-0485</div>
+      </a>
+      <a class="card contact" href="tel:+6289632380485">
+        <div class="ico" aria-hidden="true">📞</div>
+        <h3>Telepon</h3>
+        <p style="margin:0;color:var(--muted)">Hubungi langsung di jam buka.</p>
+        <div class="price">0896-3238-0485</div>
+      </a>
+      <a class="card contact" href="https://shopee.co.id/rifki_572?mmp_pid=an_11337711843&amp;uls_trackid=5763pkti00g7&amp;utm_campaign=-&amp;utm_content=-&amp;utm_medium=affiliates&amp;utm_source=an_11337711843&amp;utm_term=fvpzk7qqo8xo" target="_blank" rel="noopener sponsored">
+        <div class="ico" aria-hidden="true">🛒</div>
+        <h3>Shopee</h3>
+        <p style="margin:0;color:var(--muted)">Belanja lewat toko JAJANIN di Shopee.</p>
+        <div class="price">Buka toko</div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 JAJANIN · Jajanan UMKM lokal</div></footer>
+
+<aside id="panel" aria-label="Keranjang belanja">
+  <button class="close" id="closeCart" aria-label="Tutup keranjang">×</button>
+  <h2>Keranjang</h2>
+  <div id="items"></div>
+  <label for="nama">Nama</label><input id="nama" placeholder="Nama kamu">
+  <label for="alamat">Alamat antar</label><input id="alamat" placeholder="Alamat lengkap">
+  <div class="total"><span>Total</span><span id="total">Rp0</span></div>
+  <button class="btn" id="order" style="background:var(--brand);color:var(--on-brand);width:100%">Pesan lewat WhatsApp</button>
+  <a class="btn" href="https://shopee.co.id/rifki_572?mmp_pid=an_11337711843&amp;uls_trackid=5763pkti00g7&amp;utm_campaign=-&amp;utm_content=-&amp;utm_medium=affiliates&amp;utm_source=an_11337711843&amp;utm_term=fvpzk7qqo8xo" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;margin-top:10px;background:transparent;color:var(--text);border:2px solid var(--brand)">Belanja lewat Shopee</a>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
